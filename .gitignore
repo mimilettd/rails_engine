@@ -12,5 +12,6 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/db/data/*.csv
 
 .byebug_history
