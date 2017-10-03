@@ -29,7 +29,9 @@ require 'database_cleaner'
 ActiveRecord::Migration.maintain_test_schema!
 
 DatabaseCleaner.strategy = :truncation
+
 RSpec.configure do |config|
+
   config.before(:all) do
     DatabaseCleaner.clean
   end

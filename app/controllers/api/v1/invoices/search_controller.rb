@@ -1,4 +1,4 @@
-class Api::V1::Invoices::SearhController < ApplicationController
+class Api::V1::Invoices::SearchController < ApplicationController
 
   def index
     render json: Invoice.where(search_params)
@@ -11,7 +11,7 @@ class Api::V1::Invoices::SearhController < ApplicationController
   private
 
   def search_params
-    params.require(:invoice).permit(:id, :customer_id, :merchant_id,
+    params.permit(:id, :customer_id, :merchant_id,
                                     :created_at, :updated_at, :status)
   end
 end

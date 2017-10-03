@@ -26,13 +26,25 @@ describe 'Invoices API' do
 
   it 'can find invoice by primary key' do
     inv_list = create_list(:invoice, 3)
-    i1 = inv_list.first
+    i1 = inv_list.first.id
 
-    get "/api/v1/invoices/#{i1.id}"
+    get "/api/v1/invoices/#{i1}"
 
     invoice = JSON.parse(response.body)
 
-    expect(invoice["id"]).to eq(1)
+    expect(invoice["id"]).to eq(i1)
+
+  end
+
+  it 'can find by #customer_id' do
+    inv_list = create_list(:invoice, 3)
+    i1 = inv_list.first
+
+    get "/api/v1/invoices/find_all?customer_id=#{i1.customer_id}"
+
+    invoice = JSON.parse(response.body)
+
+    expect(invoice.count).to eq(3)
 
   end
 end
