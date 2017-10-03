@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Invoices API" do
-  it 'returns a collection of associated merchants' do
+  it 'returns the associated merchant' do
     id = create_list(:invoice, 3).first.id
 
     get "/api/v1/invoices/1/merchants"
