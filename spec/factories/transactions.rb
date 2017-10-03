@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :transaction do
-    invoice nil
+    invoice
     credit_card_number "MyString"
     result "MyString"
     created_at "2017-10-03 12:54:33"
