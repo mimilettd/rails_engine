@@ -2,27 +2,31 @@ require 'rails_helper'
 
 describe "Invoices API" do
   it 'returns a collection of associated transactions' do
-    id = create_list(:transaction, 3).first.invoice_id
+    item = create_list(:transaction, 3).first
+    invoice = Invoice.find(item.invoice_id)
 
-    get "/api/v1/invoices/#{id}/transactions"
+    get "/api/v1/invoices/#{invoice.id}/transactions"
 
     expect(response).to be_success
 
-    invoices = JSON.parse(response.body)
+    transactions = JSON.parse(response.body)
 
-    expect(invoices.count).to eq(1)
+    expect(transactions.count).to eq(1)
+    expect(transactions.first["id"]).to eq(invoice.transactions.first.id)
   end
 
   it 'returns a collection of associated invoice items' do
-    id = create_list(:invoice_item, 3).first.invoice_id
+    ii = create_list(:invoice_item, 3).first
+    invoice = Invoice.find(ii.invoice_id)
 
-    get "/api/v1/invoices/#{id}/invoice_items"
+    get "/api/v1/invoices/#{invoice.id}/invoice_items"
 
     expect(response).to be_success
 
-    invoices = JSON.parse(response.body)
+    invoice_items = JSON.parse(response.body)
 
-    expect(invoices.count).to eq(1)
+    expect(invoice_items.count).to eq(1)
+    expect(invoice_items.first["id"]).to eq(invoice.invoice_items.first.id)
   end
 
   it 'returns a collection of associated items' do
@@ -45,32 +49,33 @@ describe "Invoices API" do
 
     expect(response).to be_success
 
-    invoices = JSON.parse(response.body)
+    items = JSON.parse(response.body)
 
-    expect(invoices.count).to eq(1)
+    expect(items.count).to eq(1)
+    expect(items.first["id"]).to eq(invoice.items.first.id)
   end
 
   it 'returns the associated merchant' do
-    id = create_list(:invoice, 3).first.id
+    invoice = create_list(:invoice, 3).first
 
-    get "/api/v1/invoices/#{id}/merchant"
+    get "/api/v1/invoices/#{invoice.id}/merchant"
 
     expect(response).to be_success
 
-    invoices = JSON.parse(response.body)
+    merchant = JSON.parse(response.body)
 
-    expect(invoices["id"]).to eq(id)
+    expect(merchant["id"]).to eq(invoice.merchant.id)
   end
 
   it 'returns the associated customer' do
-    id = create_list(:invoice, 3).first.id
+    invoice = create_list(:invoice, 3).first
 
-    get "/api/v1/invoices/#{id}/customer"
+    get "/api/v1/invoices/#{invoice.id}/customer"
 
     expect(response).to be_success
 
-    invoices = JSON.parse(response.body)
+    customer = JSON.parse(response.body)
 
-    expect(invoices["id"]).to eq(id)
+    expect(customer["id"]).to eq(invoice.customer.id)
   end
 end
