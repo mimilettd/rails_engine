@@ -1,24 +1,55 @@
-# README
+# Rails Engine
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Rails Engine API allows you to query metadata and perform business analytics on merchants, invoices, invoice items, items, customers, and transactions. The return format for all endpoints is JSON.
 
-Things you may want to cover:
+## Base URL
 
-* Ruby version
+All URLs referenced in this documentation have the following base:
 
-* System dependencies
+```
+http://localhost:3000
+```
+You can override this by
+passing a `BASE_URL` environment variable:
 
-* Configuration
+```
+BASE_URL=http://my-app-url.com rake
+```
 
-* Database creation
+## Getting Started
+<b><i>This section will help you get started with our API.</i></b>
 
-* Database initialization
+### Prerequisites
 
-* How to run the test suite
+You're going to need:
+  * Ruby, version 2.3.1 or newer
+  * Bundler
 
-* Services (job queues, cache servers, search engines, etc.)
+### Getting Set Up
 
-* Deployment instructions
+1. Fork this repository on Github.
 
-* ...
+2. Clone your forked repository (not our original one) to your hard drive with
+
+```
+git clone https://github.com/mimilettd/rails_engine
+```
+3. `cd rails_engine`
+
+4. Initialize Rails Engine locally:
+
+```
+bundle install
+rails s
+```
+
+5. Create, migrate, and seed your database:
+
+```
+rake db:create
+rake db:migrate
+rake db:seed
+```
+## Sample Responses
+
+Below are some sample responses for some typical calls to the Rails Engine API. Responses will return an Object or a list of Objects depending on the End Point:
