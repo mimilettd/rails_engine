@@ -1,4 +1,4 @@
 class InvoiceItem < ApplicationRecord
-  belongs_to :item
-  belongs_to :invoice
+  belongs_to :item, required: false
+  belongs_to :invoice, required: false
 end
