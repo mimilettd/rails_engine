@@ -21,7 +21,7 @@ describe 'Merchant Invoices API' do
 
     merchant_inv = JSON.parse(response.body)
 
-    expect(merchant_inv.first["merchant_id"]).to eq(1)
-    expect(merchant_inv.count).to eq(3)
+    expect(merchant_inv.first["merchant_id"]).to eq(3)
+    expect(merchant_inv.count).to eq(1)
   end
 end
