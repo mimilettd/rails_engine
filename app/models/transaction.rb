@@ -1,3 +1,3 @@
 class Transaction < ApplicationRecord
-  belongs_to :invoice, required: false
+  belongs_to :invoice
 end
