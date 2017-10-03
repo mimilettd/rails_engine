@@ -1,5 +1,4 @@
 require 'csv'
-require './app/models/merchant.rb'
 
 desc "Import data from csv file"
 task :import => [:environment] do
