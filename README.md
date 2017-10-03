@@ -52,4 +52,15 @@ rake db:seed
 ```
 ## Sample Responses
 
-Below are some sample responses for some typical calls to the Rails Engine API. Responses will return an Object or a list of Objects depending on the End Point:
+Below are some sample responses for some typical calls to the Rails Engine API. Responses will return an Object or a list of Objects depending on the End Point.
+
+A call to `http://localhost:3000/api/v1/merchants/1.json` returns a Merchant Object for the id 1.
+
+```
+{
+  "id":1,
+  "name":"Schroeder-Jerde",
+  "created_at":"2012-03-27T14:53:59.000Z",
+  "updated_at":"2012-03-27T14:53:59.000Z"
+}
+```
