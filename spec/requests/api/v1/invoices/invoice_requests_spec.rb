@@ -57,7 +57,17 @@ describe 'Invoices API' do
     invoice = JSON.parse(response.body)
 
     expect(invoice.count).to eq(3)
+  end
 
+  it 'can find by #created_at' do
+    inv_list = create_list(:invoice, 3)
+    i1 = inv_list.first.created_at
+
+    get "/api/v1/invoices/find_all?created_at=#{i1}"
+
+    invoice = JSON.parse(response.body)
+
+    expect(invoice.count).to eq(3)
 
   end
 end
