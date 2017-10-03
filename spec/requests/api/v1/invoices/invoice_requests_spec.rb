@@ -44,7 +44,7 @@ describe 'Invoices API' do
 
     invoice = JSON.parse(response.body)
 
-    expect(invoice.count).to eq(3)
+    expect(invoice.count).to eq(1)
 
   end
 
@@ -56,7 +56,7 @@ describe 'Invoices API' do
 
     invoice = JSON.parse(response.body)
 
-    expect(invoice.count).to eq(3)
+    expect(invoice.count).to eq(1)
   end
 
   it 'can find by #created_at' do
