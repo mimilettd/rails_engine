@@ -1,5 +1,5 @@
 class Api::V1::Invoices::CustomerController < ApplicationController
   def show
-    render json: Invoice.find_by(params[:customer_id])
+    render json: Invoice.find(params[:id]).customer
   end
 end
