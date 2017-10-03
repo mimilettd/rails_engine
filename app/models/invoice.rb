@@ -1,6 +1,6 @@
 class Invoice < ApplicationRecord
-  belongs_to :customer, required: false
-  belongs_to :merchant, required: false
+  belongs_to :customer
+  belongs_to :merchant
   has_many :transactions
   has_many :invoices
 end
