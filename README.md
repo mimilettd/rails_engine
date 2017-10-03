@@ -40,7 +40,6 @@ git clone https://github.com/mimilettd/rails_engine
 
 ```
 bundle install
-rails s
 ```
 
 5. Create, migrate, and seed your database:
@@ -48,7 +47,7 @@ rails s
 ```
 rake db:create
 rake db:migrate
-rake db:seed
+rake import
 ```
 ## Sample Responses
 
@@ -59,8 +58,6 @@ A call to `http://localhost:3000/api/v1/merchants/1.json` returns a Merchant Obj
 ```
 {
   "id":1,
-  "name":"Schroeder-Jerde",
-  "created_at":"2012-03-27T14:53:59.000Z",
-  "updated_at":"2012-03-27T14:53:59.000Z"
+  "name":"Schroeder-Jerde"
 }
 ```
