@@ -1,22 +1,16 @@
 require 'csv'
+require './app/models/merchant.rb'
 
 desc "Import data from csv file"
 task :import => [:environment] do
 
-  customers = "db/data/customer.csv"
-  invoice_items = "db/data/invoice_items.csv"
-  invoices = "db/data/invoices.csv"
-  items = "db/data/items.csv"
-  merchants = "db/data/merchants.csv"
-  transactions = "db/data/transactions.csv"
+  merchants = "./db/data/merchants.csv"
 
-  # CSV.foreach(customers, :headers => :true, header_converters: :symbol) do |row|
-  #   Customer.create {
-  #     :first_name => row[1],
-  #     :last_name => row[2],
-  #     :created_at => row[3],
-  #     :updated_at => row[4]
-  #   }
-  # end
-
+  CSV.foreach(merchants, :headers => :true, header_converters: :symbol) do |row|
+    m = Merchant.new
+    m.name = row['name']
+    m.created_at = row['created_at']
+    m.updated_at = row['updated_at']
+    m.save!
+  end
 end
