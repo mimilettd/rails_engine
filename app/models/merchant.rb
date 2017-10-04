@@ -16,8 +16,9 @@ class Merchant < ApplicationRecord
       .group(:id)
       .sum("quantity * unit_price")
     end
-    sum = result[filter[:id].to_i] / 100.to_f
-    {"revenue"=>sum.to_s}
+    result[filter[:id].to_i]
+    # sum = result[filter[:id].to_i] / 100.to_f
+    # {"revenue"=>sum.to_s}
   end
 
   def favorite_customer
