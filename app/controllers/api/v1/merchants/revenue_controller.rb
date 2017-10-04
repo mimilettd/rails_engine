@@ -1,5 +1,5 @@
 class Api::V1::Merchants::RevenueController < ApplicationController
-  def index
+  def show
     render json: Merchant.total_revenue(filter)
   end
 
