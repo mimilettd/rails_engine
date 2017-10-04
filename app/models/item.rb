@@ -6,7 +6,7 @@ class Item < ApplicationRecord
   def self.top_earners(quantity=nil)
     select('items.*')
     .joins(invoices: :transactions)
-    .merge(Transaction.successful)
+    .merge(Transaction.unscoped.successful)
     .group(:id)
     .order('SUM(invoice_items.quantity * invoice_items.unit_price) DESC')
     .limit(quantity)

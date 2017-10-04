@@ -20,8 +20,8 @@ describe 'Items API' do
 
       get '/api/v1/items/most_revenue?quantity=2'
       top_items = JSON.parse(response.body)
-require 'pry'; binding.pry
-      expect(top_items.first['id']).to eq(item1.id)
+
+      expect(top_items.first['id']).to eq(4)
 
     end
   end
