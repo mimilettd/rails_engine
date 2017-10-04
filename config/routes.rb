@@ -6,6 +6,7 @@ Rails.application.routes.draw do
         get "find", to: "search#show"
         get "random", to: "random#show"
         get "/:id/invoices", to: "invoices#index"
+        get "/:id/favorite_customer", to: 'favorite_customers#show'
       end
 
       namespace :invoices do
