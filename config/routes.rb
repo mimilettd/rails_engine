@@ -6,7 +6,10 @@ Rails.application.routes.draw do
         get "find", to: "search#show"
         get "random", to: "random#show"
         get "/:id/invoices", to: "invoices#index"
+
         get "/:id/revenue", to: "revenue#show"
+        get "/:id/favorite_customer", to: 'favorite_customer#show'
+
       end
 
       namespace :invoices do
@@ -20,6 +23,9 @@ Rails.application.routes.draw do
         get "/:id/customer", to: "customer#show"
       end
 
+      namespace :items do
+        get '/most_revenue', to: 'revenue#index'
+      end
       resources :invoices, only: [:index, :show]
       resources :merchants, only: [:index, :show]
       resources :items, only: [:index, :show]
