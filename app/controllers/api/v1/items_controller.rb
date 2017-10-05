@@ -1,8 +1,6 @@
-class Api::V1::ItemsController < ApplicationRecord
-
+class Api::V1::ItemsController < ApplicationController
   def index
-    render json: Item.all.select(:id, :name, :description, :merchant_id,
-                                :created_at, :updated_at, :unit_price)
+    render json: Item.all
   end
 
   def show

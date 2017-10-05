@@ -41,4 +41,9 @@ module Helpers
     create(:transaction,  invoice: invoices.second, result: "failed")
     create(:transaction,  invoice: invoices.third)
   end
+
+  def item
+    @item = create(:item)
+    create_list(:invoice_item, 3, item: @item)
+  end
 end
