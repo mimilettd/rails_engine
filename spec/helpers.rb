@@ -46,4 +46,5 @@ module Helpers
     @item = create(:item)
     create_list(:invoice_item, 3, item: @item)
   end
+
 end
