@@ -3,6 +3,9 @@ class Merchant < ApplicationRecord
   has_many :invoices
   has_many :customers, through: :invoices
   has_many :transactions, through: :invoices
+  has_many :invoice_items, through: :invoices
+
+# default_scope { order(:id) }
 
   def self.total_revenue(filter=nil)
     if filter[:date].nil?
@@ -39,5 +42,14 @@ class Merchant < ApplicationRecord
     .group(merchant.id)
     .order("sum(invoice_items.quantity) DESC")
     .limit(limit)
+  end
+
+  def self.top_earners(quantity=nil)
+    select('merchants.*, SUM(invoice_items.quantity * invoice_items.unit_price) as revenue')
+      .joins(invoices: [:transactions, :invoice_items])
+      .merge(Transaction.unscoped.successful)
+      .group(:id)
+      .order('revenue DESC')
+      .limit(quantity)
   end
 end
