@@ -1,5 +1,5 @@
 class Api::V1::Customers::InvoicesController < ApplicationController
   def index
-    render json: Invoice.where(customer_id: params[:id])
+    render json: Customer.find(params[:id]).invoices
   end
 end
