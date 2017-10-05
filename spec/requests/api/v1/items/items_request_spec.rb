@@ -157,7 +157,24 @@ describe 'Items API' do
   end
   context "Relationship Endpoints" do
     it "returns a collection of associated invoice items" do
-      invoice
+      item
+
+      get "/api/v1/items/#{@item.id}/invoice_items"
+
+      ii = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(ii.count).to eq(3)
+    end
+    it "returns the associated merchant" do
+      item
+
+      get "/api/v1/items/#{@item.id}/merchant"
+
+      merchant = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(merchant["id"]).to eq(@item.merchant.id)
     end
   end
 end
