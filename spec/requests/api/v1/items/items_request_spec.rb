@@ -85,15 +85,15 @@ describe 'Items API' do
     end
 
     it "can find first instance by unit price" do
-      unit_price = create_list(:item, 3).first.unit_price
+      item = create_list(:item, 3).first
 
-      get "/api/v1/items/find?unit_price=#{unit_price}"
+      get "/api/v1/items/find?unit_price=#{item.unit_price}"
 
       expect(response).to be_success
 
-      item = JSON.parse(response.body)
+      result = JSON.parse(response.body)
 
-      expect(item["unit_price"]).to eq(unit_price)
+      expect(result["id"]).to eq(item.id)
     end
 
     it "can find first instance by merchant" do
@@ -140,7 +140,6 @@ describe 'Items API' do
       items = JSON.parse(response.body)
 
       expect(response).to be_success
-      expect(items.first["unit_price"]).to eq(item.unit_price)
       expect(items.count).to eq(3)
     end
 
@@ -153,7 +152,12 @@ describe 'Items API' do
 
       expect(response).to be_success
       expect(items.first["merchant_id"]).to eq(item.merchant_id)
-      expect(items.count).to eq(3)
+      expect(items.count).to eq(1)
+    end
+  end
+  context "Relationship Endpoints" do
+    it "returns a collection of associated invoice items" do
+      invoice
     end
   end
 end

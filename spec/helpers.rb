@@ -28,6 +28,9 @@ module Helpers
       create(:invoice_item, invoice: invoice, quantity: rand(1..10), unit_price: 2000)
       create(:transaction, invoice: invoice, result: status.sample)
     end
+  end
 
+  def invoice
+    @invoice = create(:invoice)
   end
 end
