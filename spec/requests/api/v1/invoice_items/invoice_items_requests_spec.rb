@@ -62,4 +62,17 @@ describe "Invoice Items API" do
       expect(customer["quantity"]).to eq(quantity)
     end
   end
+  context "Relationship Endpoints" do
+    it "returns the associated invoice" do
+      invoice_item = create(:invoice_item)
+
+      get "/api/v1/invoice_items/#{invoice_item.id}/invoice"
+
+      expect(response).to be_success
+
+      invoice = JSON.parse(response.body)
+
+      expect(invoice["id"]).to eq(invoice_item.invoice_id)
+    end
+  end
 end
