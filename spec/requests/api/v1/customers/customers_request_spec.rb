@@ -26,4 +26,16 @@ describe "Customers API" do
 
     expect(customer["id"]).to eq(id)
   end
+
+  it "can find first instance by id" do
+    id = create_list(:customer, 3).first.id
+
+    get "/api/v1/customers/find?id=#{id}"
+
+    expect(response).to be_success
+
+    customer = JSON.parse(response.body)
+
+    expect(customer["id"]).to eq(id)
+  end
 end
