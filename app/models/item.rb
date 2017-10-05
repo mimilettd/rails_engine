@@ -19,4 +19,15 @@ class Item < ApplicationRecord
     .group(:id).order('total desc')
     .limit(limit)
   end
+
+  def best_day
+    invoice_items
+    .joins(invoice: :transactions)
+    .merge(Transaction.unscoped.successful)
+    .group(:id)
+    .order('invoice_items.quantity desc')
+    .first
+    .invoice
+    .created_at
+  end
 end
