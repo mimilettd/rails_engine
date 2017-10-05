@@ -32,6 +32,7 @@ Rails.application.routes.draw do
         get '/most_revenue', to: 'revenue#index'
         get '/:id/invoice_items', to: 'invoice_items#index'
         get '/:id/merchant', to: 'merchant#index'
+        get '/most_items', to: 'most_items#index'
       end
 
       namespace :transactions do

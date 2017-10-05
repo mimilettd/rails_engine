@@ -49,5 +49,17 @@ describe "Invoice Items API" do
 
       expect(customer["invoice_id"]).to eq(invoice_id)
     end
+
+    it "can find first instance by quantity" do
+      quantity = create_list(:invoice_item, 3).first.quantity
+
+      get "/api/v1/invoice_items/find?quantity=#{quantity}"
+
+      expect(response).to be_success
+
+      customer = JSON.parse(response.body)
+
+      expect(customer["quantity"]).to eq(quantity)
+    end
   end
 end
