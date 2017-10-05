@@ -3,8 +3,10 @@ class Item < ApplicationRecord
   has_many :invoice_items
   has_many :invoices, through: :invoice_items
 
+  default_scope {order(:id)}
+
   def self.top_earners(quantity=nil)
-    select('items.*')
+    unscoped.select('items.*')
     .joins(invoices: :transactions)
     .merge(Transaction.unscoped.successful)
     .group(:id)
@@ -13,7 +15,7 @@ class Item < ApplicationRecord
   end
 
   def self.most_item(limit=5)
-    select("items.*, sum(invoice_items.quantity) as total")
+    unscoped.select("items.*, sum(invoice_items.quantity) as total")
     .joins(invoices: [:transactions])
     .merge(Transaction.unscoped.successful)
     .group(:id).order('total desc')
