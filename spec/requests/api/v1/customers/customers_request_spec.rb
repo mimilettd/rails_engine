@@ -86,6 +86,32 @@ describe "Customers API" do
       expect(customers.count).to eq(3)
     end
   end
+  context "Relationship Endpoints" do
+    it "returns a collection of associated invoices" do
+      customer = create(:customer)
+      create_list(:invoice, 3, customer: customer)
 
+      get "/api/v1/customers/#{customer.id}/invoices"
+
+      invoices = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(invoices.count).to eq(3)
+    end
+    it "returns a collection of associated transactions" do
+      customer = create(:customer)
+      invoices = create_list(:invoice, 3, customer: customer)
+      invoices.each do |invoice|
+        create(:transaction, invoice: invoice)
+      end
+
+      get "/api/v1/customers/#{customer.id}/transactions"
+
+      transactions = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(transactions.count).to eq(3)
+    end
+  end
 
 end
