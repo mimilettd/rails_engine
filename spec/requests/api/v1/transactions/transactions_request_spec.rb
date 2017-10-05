@@ -24,4 +24,25 @@ describe "Transactions API" do
 
     expect(transaction["id"]).to eq(id)
   end
+
+  it "find first instance by id" do
+    id = create_list(:transaction, 3, result: 'success').first.id
+    get "/api/v1/transactions/find?id=#{id}"
+
+    transaction = JSON.parse(response.body)
+
+    expect(response).to be_success
+    expect(transaction["id"]).to eq(id)
+  end
+
+  it "find first instance by invoice id" do
+    id = create_list(:transaction, 3, result: 'success').first.invoice_id
+
+    get "/api/v1/transactions/find?invoice_id=#{id}"
+
+    transaction = JSON.parse(response.body)
+
+    expect(response).to be_success
+    expect(transaction["invoice_id"]).to eq(id)
+  end
 end
