@@ -13,7 +13,7 @@ class Item < ApplicationRecord
   end
 
   def self.most_item(limit=5)
-    self.select("items.*, sum(invoice_items.quantity) as total")
+    select("items.*, sum(invoice_items.quantity) as total")
     .joins(invoices: [:transactions])
     .merge(Transaction.unscoped.successful)
     .group(:id).order('total desc')
