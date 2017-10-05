@@ -28,6 +28,17 @@ module Helpers
       create(:invoice_item, invoice: invoice, quantity: rand(1..10), unit_price: 2000)
       create(:transaction, invoice: invoice, result: status.sample)
     end
+  end
 
+  def customers
+    @customer = create(:customer)
+    @merchants = create_list(:merchant, 3)
+    invoices = @merchants.map do |merchant|
+      create(:invoice, customer: @customer, merchant: merchant)
+    end
+    create_list(:transaction, 2, invoice: invoices.first)
+    create(:transaction,  invoice: invoices.first, result: "failed")
+    create(:transaction,  invoice: invoices.second, result: "failed")
+    create(:transaction,  invoice: invoices.third)
   end
 end
