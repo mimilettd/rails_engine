@@ -47,5 +47,113 @@ describe 'Items API' do
 
       expect(item["id"]).to eq(id)
     end
+
+    it "can find first instance by id" do
+      id = create_list(:item, 3).first.id
+
+      get "/api/v1/items/find?id=#{id}"
+
+      expect(response).to be_success
+
+      item = JSON.parse(response.body)
+
+      expect(item["id"]).to eq(id)
+    end
+
+    it "can find first instance by name" do
+      name = create_list(:item, 3).first.name
+
+      get "/api/v1/items/find?name=#{name}"
+
+      expect(response).to be_success
+
+      item = JSON.parse(response.body)
+
+      expect(item["name"]).to eq(name)
+    end
+
+    it "can find first instance by description" do
+      description = create_list(:item, 3).first.description
+
+      get "/api/v1/items/find?description=#{description}"
+
+      expect(response).to be_success
+
+      item = JSON.parse(response.body)
+
+      expect(item["description"]).to eq(description)
+    end
+
+    it "can find first instance by unit price" do
+      unit_price = create_list(:item, 3).first.unit_price
+
+      get "/api/v1/items/find?unit_price=#{unit_price}"
+
+      expect(response).to be_success
+
+      item = JSON.parse(response.body)
+
+      expect(item["unit_price"]).to eq(unit_price)
+    end
+
+    it "can find first instance by merchant" do
+      merchant_id = create_list(:item, 3).first.merchant_id
+
+      get "/api/v1/items/find?merchant_id=#{merchant_id}"
+
+      expect(response).to be_success
+
+      item = JSON.parse(response.body)
+
+      expect(item["merchant_id"]).to eq(merchant_id)
+    end
+
+    it "can get all items by matching name" do
+      item = create_list(:item, 3).first
+
+      get "/api/v1/items/find_all?name=#{item.name}"
+
+      items = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(items.first["name"]).to eq(item.name)
+      expect(items.count).to eq(3)
+    end
+
+    it "can get all items by matching description" do
+      item = create_list(:item, 3).first
+
+      get "/api/v1/items/find_all?description=#{item.description}"
+
+      items = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(items.first["description"]).to eq(item.description)
+      expect(items.count).to eq(3)
+    end
+
+    it "can get all items by matching unit price" do
+      item = create_list(:item, 3).first
+
+      get "/api/v1/items/find_all?unit_price=#{item.unit_price}"
+
+      items = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(items.first["unit_price"]).to eq(item.unit_price)
+      expect(items.count).to eq(3)
+    end
+
+    it "can get all items by matching merchant_id" do
+      item = create_list(:item, 3).first
+
+      get "/api/v1/items/find_all?merchant_id=#{item.merchant_id}"
+
+      items = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(items.first["merchant_id"]).to eq(item.merchant_id)
+      expect(items.count).to eq(3)
+    end
   end
 end
