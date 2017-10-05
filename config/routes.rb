@@ -33,10 +33,12 @@ Rails.application.routes.draw do
         get "find", to: "search#show"
         get "/:id/invoice", to: "invoice#show"
       end
+
       resources :invoices, only: [:index, :show]
       resources :merchants, only: [:index, :show]
       resources :items, only: [:index, :show]
       resources :transactions, only: [:index, :show]
+      resources :customers, only: [:index, :show]
     end
   end
 end

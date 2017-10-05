@@ -14,7 +14,7 @@ describe "Transactions API" do
       expect(transactions.count).to eq(3)
     end
 
-    it "can get one transaction by its id" do
+    it "can get one transaction" do
       id = create(:transaction).id
 
       get "/api/v1/transactions/#{id}"
