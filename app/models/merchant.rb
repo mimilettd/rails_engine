@@ -17,9 +17,11 @@ class Merchant < ApplicationRecord
       .sum("quantity * unit_price")
     end
     result[filter[:id].to_i]
-    # sum = result[filter[:id].to_i] / 100.to_f
-    # {"revenue"=>sum.to_s}
   end
+
+  # def total_revenue(filter=nil)
+  #   merchant.invoices.joins(:invoice_items, :transactions)
+  # end
 
   def favorite_customer
     customers
@@ -29,5 +31,13 @@ class Merchant < ApplicationRecord
     .group('customers.id')
     .order('trans_count desc')
     .first
+  end
+
+  def self.most_items(limit)
+    joins(invoices: [:invoice_items, :transactions])
+    .where(transactions: {result: 'success'})
+    .group(merchant.id)
+    .order("sum(invoice_items.quantity) DESC")
+    .limit(limit)
   end
 end
