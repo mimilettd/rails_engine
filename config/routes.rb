@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         get "random", to: "random#show"
         get "/:id/invoices", to: "invoices#index"
         get "/:id/favorite_customer", to: 'favorite_customer#show'
+        get "/most_revenue", to: 'revenue#index'
       end
 
       namespace :invoices do
