@@ -33,4 +33,16 @@ describe "Merchant Transactions API" do
     expect(response).to be_success
     expect(result.count).to eq(3)
   end
+
+  it "returns the total revenue for all merchants with successful transactions" do
+    merchant
+
+    get "/api/v1/merchants/revenue?date=#{merchant.created_at}"
+
+    result = JSON.parse(response.body)
+
+    expect(response).to be_success
+    expect(result).to eq({"total_revenue"=>"0.0"})
+  end
+
 end
