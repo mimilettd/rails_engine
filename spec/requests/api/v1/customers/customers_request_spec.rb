@@ -113,5 +113,17 @@ describe "Customers API" do
       expect(transactions.count).to eq(3)
     end
   end
+  context "Business Intelligence" do
+    it "returns a merchant where the customer has conducted the most successful transactions" do
+      customers
+
+      get "/api/v1/customers/#{@customer.id}/favorite_merchant"
+
+      merchant = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(merchant["id"]).to eq(@merchants.first.id)
+    end
+  end
 
 end
