@@ -177,4 +177,9 @@ describe 'Items API' do
       expect(merchant["id"]).to eq(@item.merchant.id)
     end
   end
+  context "Business Intelligence" do
+    it "returns the date with the most sales for the given item using the invoice date" do
+      
+    end
+  end
 end
