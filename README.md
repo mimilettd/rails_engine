@@ -30,7 +30,7 @@ git clone https://github.com/mimilettd/rails_engine
 ```
 3. `cd rails_engine`
 
-4. Run `bundle exec`
+4. Run `bundle`
 
 5. Create, migrate, and seed your database:
 
