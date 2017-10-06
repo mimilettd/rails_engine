@@ -23,6 +23,9 @@ describe 'Items API' do
       # expect(top_items.first['id']).to eq(4)
       expect(top_items.count).to eq(2)
     end
+    it "returns the date with the most sales for the given item using the invoice date" do
+
+    end
   end
   context 'Record Endpoints' do
     it "can send a list of items" do
@@ -175,11 +178,6 @@ describe 'Items API' do
 
       expect(response).to be_success
       expect(merchant["id"]).to eq(@item.merchant.id)
-    end
-  end
-  context "Business Intelligence" do
-    it "returns the date with the most sales for the given item using the invoice date" do
-      
     end
   end
 end
