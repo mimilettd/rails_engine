@@ -48,16 +48,15 @@ describe "Merchant Transactions API" do
     expect(response).to be_success
     expect(result).to eq({"total_revenue" => "0.0"})
   end
-
   it 'returns variable list of merchants ranked by revenue' do
-    merchants
+    revenue_set_up
 
     get "/api/v1/merchants/most_revenue?quantity=2"
 
     merchs = JSON.parse(response.body)
 
     expect(merchs.count).to eq(2)
-    expect(merchs.first["id"]).to eq(60)
-    expect(merchs.last["id"]).to eq(61)
+    expect(merchs.first["id"]).to eq(@merchant_2.id)
+    expect(merchs.last["id"]).to eq(@merchant_1.id)
   end
 end
