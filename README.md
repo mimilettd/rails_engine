@@ -36,11 +36,7 @@ git clone https://github.com/mimilettd/rails_engine
 ```
 3. `cd rails_engine`
 
-4. Initialize Rails Engine locally:
-
-```
-bundle install
-```
+4. Run `bundle install`
 
 5. Create, migrate, and seed your database:
 
@@ -49,6 +45,10 @@ rake db:create
 rake db:migrate
 rake import
 ```
+
+6. Run `rspec` to confirm passing tests.
+
+7. To initialize Rails Engine locally, run `rails s`
 
 ## Request URLs
 

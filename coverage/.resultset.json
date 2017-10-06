@@ -213,19 +213,6 @@
         1,
         1,
         1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
         1,
         null,
         null,
@@ -242,7 +229,70 @@
         1,
         1,
         1,
+        1,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/models/item.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        123,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/models/application_record.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
         null,
         null
       ],
@@ -325,13 +375,54 @@
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/models/application_record.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items/search_controller.rb": [
+        1,
+        1,
+        4,
+        null,
+        null,
+        1,
+        5,
+        null,
+        null,
+        1,
+        1,
+        9,
+        2,
+        null,
+        9,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/item_serializer.rb": [
         1,
         1,
         null,
         1,
-        0,
+        23,
+        23,
         null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/models/invoice_item.rb": [
+        1,
+        1,
+        1,
         null
       ],
       "/Users/Mimi/turing/3module/projects/rails_engine/app/models/invoice.rb": [
@@ -360,98 +451,7 @@
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/models/invoice_item.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/models/item.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        123,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        0,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/total_revenue_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/application_controller.rb": [
-        1,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/models/transaction.rb": [
-        1,
-        1,
-        null,
-        5,
-        1,
-        null,
-        106,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/total_revenue_serializer.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/customers_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/customer_serializer.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/most_items_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items/merchant_controller.rb": [
         1,
         1,
         1,
@@ -463,80 +463,7 @@
         1,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/revenue_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        1,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/revenue_serializer.rb": [
-        1,
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/favorite_customer_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/search_controller.rb": [
-        1,
-        1,
-        4,
-        null,
-        null,
-        1,
-        3,
-        null,
-        null,
-        1,
-        1,
-        7,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/invoices_controller.rb": [
-        1,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/invoice_serializer.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/invoice_items_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items/invoice_items_controller.rb": [
         1,
         1,
         1,
@@ -553,160 +480,44 @@
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/search_controller.rb": [
-        1,
-        null,
-        1,
-        6,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        null,
-        1,
-        6,
-        null,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/items_controller.rb": [
-        1,
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/models/transaction.rb": [
         1,
         1,
         null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/item_serializer.rb": [
-        1,
-        1,
-        null,
-        1,
-        23,
-        23,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/customer_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/merchant_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/transactions_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/transaction_serializer.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers/search_controller.rb": [
-        1,
-        1,
-        2,
-        null,
-        null,
-        1,
-        3,
-        null,
-        null,
-        1,
-        1,
         5,
+        1,
         null,
+        106,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers_controller.rb": [
-        1,
-        1,
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items/revenue_controller.rb": [
         1,
         null,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers/transactions_controller.rb": [
-        1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers/invoices_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoice_items/invoice_controller.rb": [
+        1,
+        null,
         1,
         1,
-        1,
+        null,
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers/favorite_merchant_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/invoice_serializer.rb": [
         1,
         1,
-        1,
-        1,
-        null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/transactions/invoice_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoice_items/item_controller.rb": [
         1,
+        null,
         1,
         1,
         null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/transactions/search_controller.rb": [
-        1,
-        1,
-        5,
-        null,
-        null,
-        1,
-        4,
-        null,
-        null,
-        1,
-        1,
-        9,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/transactions_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
         null,
         null
       ],
@@ -743,77 +554,270 @@
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoice_items/invoice_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoice_items/item_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items/merchant_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers/transactions_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items/invoice_items_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/transaction_serializer.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers/invoices_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items/revenue_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers/search_controller.rb": [
         1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        3,
+        null,
+        null,
+        1,
+        1,
+        5,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/customer_serializer.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers_controller.rb": [
+        1,
+        1,
+        1,
+        null,
         null,
         1,
         1,
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items/search_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/customers/favorite_merchant_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/search_controller.rb": [
         1,
         1,
         4,
         null,
         null,
         1,
+        3,
+        null,
+        null,
+        1,
+        1,
+        7,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/revenue_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/total_revenue_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/total_revenue_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/serializers/revenue_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/customers_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/favorite_customer_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/most_items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/merchants/invoices_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/search_controller.rb": [
+        1,
+        null,
+        1,
+        6,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        6,
+        null,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/customer_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/merchant_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/transactions_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices/invoice_items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/invoices_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/transactions/search_controller.rb": [
+        1,
+        1,
         5,
         null,
         null,
         1,
-        1,
-        9,
-        2,
+        4,
         null,
+        null,
+        1,
+        1,
         9,
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/items_controller.rb": [
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/transactions_controller.rb": [
         1,
         1,
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/rails_engine/app/controllers/api/v1/transactions/invoice_controller.rb": [
+        1,
         1,
         1,
         null,
         null
       ]
     },
-    "timestamp": 1507261198
+    "timestamp": 1507261938
   }
 }
