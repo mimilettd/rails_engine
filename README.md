@@ -202,4 +202,4 @@ GET /api/v1/customers/:id/favorite_merchant
 
 ## Additional Information
 
-This is the first individual project of Module 3 at the Turing School. More information on this project can be found <a href="http://backend.turing.io/module3/projects/rails_engine">here</a>.
+This is the first paired project of Module 3 at the Turing School. More information on this project can be found <a href="http://backend.turing.io/module3/projects/rails_engine">here</a>.
