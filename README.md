@@ -6,15 +6,9 @@ The Rails Engine API allows you to query metadata and perform business analytics
 
 All URLs referenced in this documentation have the following base:
 
-```
-http://localhost:3000
-```
-You can override this by
-passing a `BASE_URL` environment variable:
 
-```
-BASE_URL=http://my-app-url.com rake
-```
+<a href="https://rocky-dawn-71159.herokuapp.com">https://rocky-dawn-71159.herokuapp.com</a>
+
 
 ## Getting Started
 <b><i>This section will help you get started with our API.</i></b>
@@ -59,7 +53,7 @@ GET /api/v1/merchants.json
 GET /api/v1/merchants/1.json
 GET /api/v1/merchants/find_all
 GET /api/v1/merchants/find?
-api/v1/merchants/random.json
+GET /api/v1/merchants/random.json
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `name`, `created_at`, `updated_at`.
@@ -96,7 +90,7 @@ GET /api/v1/transactions.json
 GET /api/v1/transactions/1.json
 GET /api/v1/transactions/find_all?
 GET /api/v1/transactions/find?
-api/v1/transactions/random.json
+GET /api/v1/transactions/random.json
 ```
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `invoice_id`, `credit_card_number`, `result`, `created_at`, `updated_at`.
 
@@ -113,7 +107,7 @@ GET /api/v1/customers.json
 GET /api/v1/customers/1.json
 GET /api/v1/customers/find_all
 GET /api/v1/customers/find?
-api/v1/customers/random.json
+GET /api/v1/customers/random.json
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `first_name`, `last_name`, `created_at`, `updated_at`.
@@ -138,7 +132,7 @@ GET /api/v1/invoices.json
 GET /api/v1/invoices/1.json
 GET /api/v1/invoices/find_all
 GET /api/v1/invoices/find?
-api/v1/invoices/random.json
+GET /api/v1/invoices/random.json
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `customer_id`, `merchant_id`, `status`, `created_at`, `updated_at`.
@@ -160,7 +154,7 @@ GET /api/v1/transactions.json
 GET /api/v1/transactions/1.json
 GET /api/v1/transactions/find_all
 GET /api/v1/transactions/find?
-api/v1/transactions/random.json
+GET /api/v1/transactions/random.json
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `invoice_id`, `credit_card_number`, `result`, `created_at`, `updated_at`.
@@ -178,7 +172,7 @@ GET /api/v1/transactions.json
 GET /api/v1/transactions/1.json
 GET /api/v1/transactions/find_all
 GET /api/v1/transactions/find?
-api/v1/transactions/random.json
+GET /api/v1/transactions/random.json
 ```
 
 <b><i>Customer Record Endpoints</i></b>
@@ -188,7 +182,7 @@ GET /api/v1/customers.json
 GET /api/v1/customers/1.json
 GET /api/v1/customers/find_all
 GET /api/v1/customers/find?
-api/v1/customers/random.json
+GET /api/v1/customers/random.json
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `first_name`, `last_name`, `created_at`, `updated_at`.
