@@ -149,5 +149,42 @@ describe 'Invoices API' do
 
       expect(customer["id"]).to eq(invoice.customer.id)
     end
+
+    it "can get all invoices by customer id" do
+      invoice = create_list(:invoice, 3).first
+
+      get "/api/v1/invoices/find_all?customer_id=#{invoice.customer_id}"
+
+      invoices = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(invoices.first["customer_id"]).to eq(invoice.customer_id)
+      expect(invoices.count).to eq(1)
+    end
+
+    it "can get all invoices by merchant id" do
+      invoice = create_list(:invoice, 3).first
+
+      get "/api/v1/invoices/find_all?merchant_id=#{invoice.merchant_id}"
+
+      invoices = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(invoices.first["merchant_id"]).to eq(invoice.merchant_id)
+      expect(invoices.count).to eq(1)
+    end
+
+    it "can get all invoices by status" do
+      invoice = create_list(:invoice, 3).first
+
+      get "/api/v1/invoices/find_all?status=#{invoice.status}"
+
+      invoices = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(invoices.first["status"]).to eq(invoice.status)
+      expect(invoices.count).to eq(3)
+    end
+
   end
 end
