@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Merchant Invoices API' do
   it 'returns an invoice list for specific merchant' do
     merch = create(:merchant)
-    create_list(:invoice, 3)
+    create_list(:invoice, 3, merchant: merch)
 
     get "/api/v1/merchants/#{merch.id}/invoices"
 
