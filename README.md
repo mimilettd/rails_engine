@@ -36,11 +36,7 @@ git clone https://github.com/mimilettd/rails_engine
 ```
 3. `cd rails_engine`
 
-4. Initialize Rails Engine locally:
-
-```
-bundle install
-```
+4. Run `bundle exec`
 
 5. Create, migrate, and seed your database:
 
@@ -49,6 +45,10 @@ rake db:create
 rake db:migrate
 rake import
 ```
+
+6. Run `rspec` to confirm passing tests.
+
+7. Initialize server locally by running `rails s`
 
 ## Request URLs
 
@@ -60,7 +60,6 @@ GET /api/v1/merchants/1.json
 GET /api/v1/merchants/find_all
 GET /api/v1/merchants/find?
 api/v1/merchants/random.json
-
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `name`, `created_at`, `updated_at`.
@@ -98,7 +97,6 @@ GET /api/v1/transactions/1.json
 GET /api/v1/transactions/find_all?
 GET /api/v1/transactions/find?
 api/v1/transactions/random.json
-
 ```
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `invoice_id`, `credit_card_number`, `result`, `created_at`, `updated_at`.
 
@@ -116,7 +114,6 @@ GET /api/v1/customers/1.json
 GET /api/v1/customers/find_all
 GET /api/v1/customers/find?
 api/v1/customers/random.json
-
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `first_name`, `last_name`, `created_at`, `updated_at`.
@@ -142,7 +139,6 @@ GET /api/v1/invoices/1.json
 GET /api/v1/invoices/find_all
 GET /api/v1/invoices/find?
 api/v1/invoices/random.json
-
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `customer_id`, `merchant_id`, `status`, `created_at`, `updated_at`.
@@ -165,7 +161,6 @@ GET /api/v1/transactions/1.json
 GET /api/v1/transactions/find_all
 GET /api/v1/transactions/find?
 api/v1/transactions/random.json
-
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `invoice_id`, `credit_card_number`, `result`, `created_at`, `updated_at`.
@@ -184,7 +179,6 @@ GET /api/v1/transactions/1.json
 GET /api/v1/transactions/find_all
 GET /api/v1/transactions/find?
 api/v1/transactions/random.json
-
 ```
 
 <b><i>Customer Record Endpoints</i></b>
@@ -195,7 +189,6 @@ GET /api/v1/customers/1.json
 GET /api/v1/customers/find_all
 GET /api/v1/customers/find?
 api/v1/customers/random.json
-
 ```
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `first_name`, `last_name`, `created_at`, `updated_at`.
@@ -211,9 +204,8 @@ GET /api/v1/customers/:id/transactions
 
 ```
 GET /api/v1/customers/:id/favorite_merchant
-
 ```
 
 ## Additional Information
 
-This is the first individual project of Module 3 at the Turing School. More information on this project can be found <a href="http://backend.turing.io/module3/projects/rails_engine">.
+This is the first individual project of Module 3 at the Turing School. More information on this project can be found <a href="http://backend.turing.io/module3/projects/rails_engine">here</a>.
