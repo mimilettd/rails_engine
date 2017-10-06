@@ -49,15 +49,171 @@ rake db:create
 rake db:migrate
 rake import
 ```
-## Sample Responses
 
-Below are some sample responses for some typical calls to the Rails Engine API. Responses will return an Object or a list of Objects depending on the End Point.
+## Request URLs
 
-A call to `http://localhost:3000/api/v1/merchants/1.json` returns a Merchant Object for the id 1.
+<b><i>Merchant Record Endpoints<i></b>
 
 ```
-{
-  "id":1,
-  "name":"Schroeder-Jerde"
-}
+GET /api/v1/merchants.json
+GET /api/v1/merchants/1.json
+GET /api/v1/merchants/find_all
+GET /api/v1/merchants/find?
+api/v1/merchants/random.json
+
 ```
+
+<b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `name`, `created_at`, `updated_at`.
+
+Sample Response for `/api/v1/merchants/find_all?name=Cummings-Thiel`:
+
+```
+[{"id":4,"name":"Cummings-Thiel"}]
+```
+
+<b><i>Merchant Relationship Endpoints<i></b>
+
+```
+GET /api/v1/merchants/:id/items
+GET /api/v1/merchants/:id/invoices
+```
+
+<b><i>Merchant Business Intelligence Endpoints<i></b>
+
+```
+GET /api/v1/merchants/most_revenue?quantity=x
+GET /api/v1/merchants/most_items?quantity=x
+GET /api/v1/merchants/revenue?date=x
+GET /api/v1/merchants/:id/revenue
+GET /api/v1/merchants/:id/revenue?date=x
+GET /api/v1/merchants/:id/favorite_customer
+GET /api/v1/merchants/:id/customers_with_pending_invoices
+```
+
+<b><i>Transactions Record Endpoints<i></b>
+
+```
+GET /api/v1/transactions.json
+GET /api/v1/transactions/1.json
+GET /api/v1/transactions/find_all?
+GET /api/v1/transactions/find?
+api/v1/transactions/random.json
+
+```
+<b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `invoice_id`, `credit_card_number`, `result`, `created_at`, `updated_at`.
+
+<b><i>Transactions Relationship Endpoints<i></b>
+
+```
+GET /api/v1/transactions/:id/invoice
+```
+
+<b><i>Customer Record Endpoints<i></b>
+
+```
+GET /api/v1/customers.json
+GET /api/v1/customers/1.json
+GET /api/v1/customers/find_all
+GET /api/v1/customers/find?
+api/v1/customers/random.json
+
+```
+
+<b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `first_name`, `last_name`, `created_at`, `updated_at`.
+
+<b><i>Customer Relationship Endpoints<i></b>
+
+```
+GET /api/v1/customers/:id/invoices
+GET /api/v1/customers/:id/transactions
+```
+
+<b><i>Customer Business Intelligence Endpoints<i></b>
+
+```
+GET /api/v1/customers/:id/favorite_merchant
+```
+
+<b><i>Invoice Record Endpoints<i></b>
+
+```
+GET /api/v1/invoices.json
+GET /api/v1/invoices/1.json
+GET /api/v1/invoices/find_all
+GET /api/v1/invoices/find?
+api/v1/invoices/random.json
+
+```
+
+<b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `customer_id`, `merchant_id`, `status`, `created_at`, `updated_at`.
+
+<b><i>Invoice Relationship Endpoints<i></b>
+
+```
+GET /api/v1/invoices/:id/transactions
+GET /api/v1/invoices/:id/invoice_items
+GET /api/v1/invoices/:id/items
+GET /api/v1/invoices/:id/customer
+GET /api/v1/invoices/:id/merchant
+```
+
+<b><i>Transaction Record Endpoints<i></b>
+
+```
+GET /api/v1/transactions.json
+GET /api/v1/transactions/1.json
+GET /api/v1/transactions/find_all
+GET /api/v1/transactions/find?
+api/v1/transactions/random.json
+
+```
+
+<b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `invoice_id`, `credit_card_number`, `result`, `created_at`, `updated_at`.
+
+<b><i>Transaction Relationship Endpoints<i></b>
+
+```
+GET /api/v1/transactions/:id/invoice
+```
+
+<b><i>Transaction Record Endpoints<i></b>
+
+```
+GET /api/v1/transactions.json
+GET /api/v1/transactions/1.json
+GET /api/v1/transactions/find_all
+GET /api/v1/transactions/find?
+api/v1/transactions/random.json
+
+```
+
+<b><i>Customer Record Endpoints<i></b>
+
+```
+GET /api/v1/customers.json
+GET /api/v1/customers/1.json
+GET /api/v1/customers/find_all
+GET /api/v1/customers/find?
+api/v1/customers/random.json
+
+```
+
+<b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `first_name`, `last_name`, `created_at`, `updated_at`.
+
+<b><i>Customer Relationship Endpoints<i></b>
+
+```
+GET /api/v1/customers/:id/invoices
+GET /api/v1/customers/:id/transactions
+```
+
+<b><i>Customer Business Intelligence Endpoints<i></b>
+
+```
+GET /api/v1/customers/:id/favorite_merchant
+
+```
+
+## Additional Information
+
+This is the first individual project of Module 3 at the Turing School. More information on this project can be found <a href="http://backend.turing.io/module3/projects/rails_engine">.
