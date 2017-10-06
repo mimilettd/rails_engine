@@ -52,7 +52,7 @@ rake import
 
 ## Request URLs
 
-<b><i>Merchant Record Endpoints<i></b>
+<b><i>Merchant Record Endpoints</i></b>
 
 ```
 GET /api/v1/merchants.json
@@ -71,14 +71,14 @@ Sample Response for `/api/v1/merchants/find_all?name=Cummings-Thiel`:
 [{"id":4,"name":"Cummings-Thiel"}]
 ```
 
-<b><i>Merchant Relationship Endpoints<i></b>
+<b><i>Merchant Relationship Endpoints</i></b>
 
 ```
 GET /api/v1/merchants/:id/items
 GET /api/v1/merchants/:id/invoices
 ```
 
-<b><i>Merchant Business Intelligence Endpoints<i></b>
+<b><i>Merchant Business Intelligence Endpoints</i></b>
 
 ```
 GET /api/v1/merchants/most_revenue?quantity=x
@@ -90,7 +90,7 @@ GET /api/v1/merchants/:id/favorite_customer
 GET /api/v1/merchants/:id/customers_with_pending_invoices
 ```
 
-<b><i>Transactions Record Endpoints<i></b>
+<b><i>Transactions Record Endpoints</i></b>
 
 ```
 GET /api/v1/transactions.json
@@ -102,13 +102,13 @@ api/v1/transactions/random.json
 ```
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `invoice_id`, `credit_card_number`, `result`, `created_at`, `updated_at`.
 
-<b><i>Transactions Relationship Endpoints<i></b>
+<b><i>Transactions Relationship Endpoints</i></b>
 
 ```
 GET /api/v1/transactions/:id/invoice
 ```
 
-<b><i>Customer Record Endpoints<i></b>
+<b><i>Customer Record Endpoints</i></b>
 
 ```
 GET /api/v1/customers.json
@@ -121,20 +121,20 @@ api/v1/customers/random.json
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `first_name`, `last_name`, `created_at`, `updated_at`.
 
-<b><i>Customer Relationship Endpoints<i></b>
+<b><i>Customer Relationship Endpoints</i></b>
 
 ```
 GET /api/v1/customers/:id/invoices
 GET /api/v1/customers/:id/transactions
 ```
 
-<b><i>Customer Business Intelligence Endpoints<i></b>
+<b><i>Customer Business Intelligence Endpoints</i></b>
 
 ```
 GET /api/v1/customers/:id/favorite_merchant
 ```
 
-<b><i>Invoice Record Endpoints<i></b>
+<b><i>Invoice Record Endpoints</i></b>
 
 ```
 GET /api/v1/invoices.json
@@ -147,7 +147,7 @@ api/v1/invoices/random.json
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `customer_id`, `merchant_id`, `status`, `created_at`, `updated_at`.
 
-<b><i>Invoice Relationship Endpoints<i></b>
+<b><i>Invoice Relationship Endpoints</i></b>
 
 ```
 GET /api/v1/invoices/:id/transactions
@@ -157,7 +157,7 @@ GET /api/v1/invoices/:id/customer
 GET /api/v1/invoices/:id/merchant
 ```
 
-<b><i>Transaction Record Endpoints<i></b>
+<b><i>Transaction Record Endpoints</i></b>
 
 ```
 GET /api/v1/transactions.json
@@ -170,13 +170,13 @@ api/v1/transactions/random.json
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `invoice_id`, `credit_card_number`, `result`, `created_at`, `updated_at`.
 
-<b><i>Transaction Relationship Endpoints<i></b>
+<b><i>Transaction Relationship Endpoints</i></b>
 
 ```
 GET /api/v1/transactions/:id/invoice
 ```
 
-<b><i>Transaction Record Endpoints<i></b>
+<b><i>Transaction Record Endpoints</i></b>
 
 ```
 GET /api/v1/transactions.json
@@ -187,7 +187,7 @@ api/v1/transactions/random.json
 
 ```
 
-<b><i>Customer Record Endpoints<i></b>
+<b><i>Customer Record Endpoints</i></b>
 
 ```
 GET /api/v1/customers.json
@@ -200,14 +200,14 @@ api/v1/customers/random.json
 
 <b>Note:</b> For `find_all` and `find`, you can use the following search params: `id`, `first_name`, `last_name`, `created_at`, `updated_at`.
 
-<b><i>Customer Relationship Endpoints<i></b>
+<b><i>Customer Relationship Endpoints</i></b>
 
 ```
 GET /api/v1/customers/:id/invoices
 GET /api/v1/customers/:id/transactions
 ```
 
-<b><i>Customer Business Intelligence Endpoints<i></b>
+<b><i>Customer Business Intelligence Endpoints</i></b>
 
 ```
 GET /api/v1/customers/:id/favorite_merchant
