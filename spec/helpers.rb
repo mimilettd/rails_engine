@@ -47,4 +47,26 @@ module Helpers
     create_list(:invoice_item, 3, item: @item)
   end
 
+  def revenue_set_up
+    @merchant_1 = create(:merchant)
+    @merchant_2 = create(:merchant)
+    @merchant_3 = create(:merchant)
+    invoice_1 = create(:invoice, merchant: @merchant_1)
+    invoice_2 = create(:invoice, merchant: @merchant_2)
+    invoice_3 = create(:invoice, merchant: @merchant_3)
+    create(:transaction,  invoice: invoice_1)
+    create(:transaction,  invoice: invoice_1)
+    create(:transaction,  invoice: invoice_2)
+    create(:transaction,  invoice: invoice_2)
+    create(:transaction,  invoice: invoice_2)
+    create(:transaction,  invoice: invoice_3)
+    create(:invoice_item, invoice: invoice_1, unit_price: 2000)
+    create(:invoice_item, invoice: invoice_1, unit_price: 2000)
+    create(:invoice_item, invoice: invoice_2, unit_price: 2000)
+    create(:invoice_item, invoice: invoice_2, unit_price: 2000)
+    create(:invoice_item, invoice: invoice_2, unit_price: 2000)
+    create(:invoice_item, invoice: invoice_3, unit_price: 2000)
+  end
+
+
 end
