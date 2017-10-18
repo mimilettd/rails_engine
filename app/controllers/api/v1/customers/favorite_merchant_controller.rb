@@ -6,7 +6,6 @@ class Api::V1::Customers::FavoriteMerchantController < ApplicationController
 
   swagger_api :show do
     summary 'Returns merchant that a certain customer shopped at most.'
-    notes 'Notes...'
   end
 
   def show
