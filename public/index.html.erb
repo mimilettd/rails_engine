@@ -70,7 +70,7 @@
 <script src="./swagger-ui-bundle.js"> </script>
 <script src="./swagger-ui-standalone-preset.js"> </script>
 <script>
-
+<%= render partial: 'swagger_ui/swagger_ui', locals: {discovery_url: discovery_url} %>
 window.onload = function() {
 
   // Build a system
