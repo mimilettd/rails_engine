@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/api-docs.json' => redirect('/public/index.html')
   namespace :api do
     namespace :v1 do
       namespace :merchants do
